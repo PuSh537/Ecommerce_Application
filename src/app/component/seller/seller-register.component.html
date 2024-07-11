@@ -1,0 +1,69 @@
+<div class="container">
+    <h2>Seller Registration Form</h2>
+    <form #sellerForm="ngForm" (ngSubmit)="onSubmit(sellerForm)" class="mt-3">
+        <div class="form-group">
+            <label for="sellererName">Enter Name</label>
+            <input type="text" id="sellerName" name="sellerName" [(ngModel)]="seller.sellerName"
+                class="form-control" required>
+        </div>
+        <!-- <div class="form-group">
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" [(ngModel)]="seller.gender" class="form-control" required>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </div> -->
+          <div class="form-group">
+            <label for="businessName">Enter Businessname</label>
+            <input type="text" id="businessName" name="businessName" [(ngModel)]="seller.businessName"
+                class="form-control" required>
+          </div>
+
+    
+          <div class="form-group">
+            <label for="phoneNumber">Contact Number</label>
+            <input type="text" id="phoneNumber" name="phoneNumber" [(ngModel)]="seller.phoneNumber" class="form-control"
+             >
+          </div>
+    
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" [(ngModel)]="seller.email" class="form-control">
+          </div>
+    
+          <div class="form-group">
+            <label for="username">address</label>
+            <input type="text" id="address" name="address" [(ngModel)]="seller.address" class="form-control" required>
+          </div>
+    
+          <div class="form-group">
+            <label for="password">sellingDomain</label>
+            <input type="text" id="sellingDomain" name="sellingDomain" [(ngModel)]="seller.sellingDomain" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label for="password">username</label>
+            <input type="text" id="username" name="username" [(ngModel)]="seller.username" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" [(ngModel)]="seller.password" class="form-control" required>
+          </div>
+    
+          <div class="form-group">
+            <label for="role">Role</label>
+            <select id="role" name="role" [(ngModel)]="seller.role" class="form-control" required>
+              <option value="seller">seller</option>
+            </select>
+          </div>
+    
+          
+          <div class="mybutton">
+        <!-- <button type="submit" class="btn btn-primary" [disabled]="sellerForm.invalid"><b>Submit</b></button> -->
+        <button type="submit" class="btn btn-primary"><b>Submit</b></button>
+        <div class="text-center pt-4 "><b>Are you a seller?</b><a id="forget" routerLink="/sellerRegister"><b>Register</b></a></div>
+      </div>
+    </form>
+</div>

@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-6">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <td><strong>Name:</strong></td>
+                            <td>{{ adminProfile.adminName }}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Email:</strong></td>
+                            <td>{{ adminProfile.email }}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Phone Number:</strong></td>
+                            <td>{{ adminProfile.phoneNumber }}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Username:</strong></td>
+                            <td>{{ adminProfile.username }}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Joining Date:</strong></td>
+                            <td>{{ adminProfile.joiningDate }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="text-center mt-3">
+                <button class="btn btn-primary" style = "background: #4c0420;"  (click)="goBack()">Back</button>
+            </div>
+        </div>
+    </div>
+</div>

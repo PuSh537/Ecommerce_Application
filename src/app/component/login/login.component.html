@@ -1,0 +1,37 @@
+<p>login works!</p>
+<div class="container">
+    <div class="d-flex justify-content-center h-100">
+        <div class="card">
+            <div class="card-header">
+                <h3>Log In</h3>
+            </div>
+            <div class="card-body text-center">
+                <form #formData=ngForm (ngSubmit)="readFormData(formData)">
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+                        <input type="username" class="form-control styled-input" placeholder="Username" name="username"
+                            required #uName="ngModel" ngModel>
+                        <span style="color:red" *ngIf="uName.touched && uName.invalid">UserName is required</span>
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+                        <input type="password" class="form-control styled-input" name="password" placeholder="password"
+                            required #pwd="ngModel" ngModel>
+                        <span style="color:red" *ngIf="pwd.touched && pwd.invalid">Password is mandartory</span>
+                    </div>
+                    <button id="button" type="submit" class="btn float-right login_btn">Login</button>
+                </form>
+            </div>
+            <div class="card-footer">
+                <div class="d-flex justify-content-center links">
+                    Don't have an account?<a Sign id="forget" routerLink="/customerRegister">Sign Up</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

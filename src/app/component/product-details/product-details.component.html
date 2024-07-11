@@ -1,0 +1,43 @@
+<div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div class="card p-4" style="width: 400px;">
+      <h1 class="text-center mb-4">Add Product</h1>
+      <form #productForm="ngForm" (ngSubmit)="addProduct()">
+        <div class="form-group">
+          <label for="productName">Product Name</label>
+          <input type="text" class="form-control" id="productName" name="productName" [(ngModel)]="product.productName" required>
+        </div>
+        <div class="form-group">
+          <label for="productImageURL">Product Image URL</label>
+          <input type="text" class="form-control" id="productImageURL" name="productImageURL" [(ngModel)]="product.productImageURL" required>
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea class="form-control" id="description" name="description" [(ngModel)]="product.description" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input type="number" class="form-control" id="price" name="price" [(ngModel)]="product.price" required>
+        </div>
+        <div class="form-group">
+          <label for="stockQuantity">Stock Quantity</label>
+          <input type="number" class="form-control" id="stockQuantity" name="stockQuantity" [(ngModel)]="product.stockQuantity" required>
+        </div>
+        <div class="form-group">
+          <label for="brand">Brand</label>
+          <input type="text" class="form-control" id="brand" name="brand" [(ngModel)]="product.brand" required>
+        </div>
+        <div class="form-group">
+          <label for="subCategoryId">Sub Category</label>
+          <select class="form-control" id="subCategoryId" name="subCategoryId" [(ngModel)]="selectedSubCategoryId" required>
+            <option *ngFor="let subCategory of subCategories" [value]="subCategory.subCategoryId">{{ subCategory.subCategoryName }}</option>
+          </select>
+        </div>
+          <br>
+        <button type="submit" class="btn btn-primary btn-block" style = "background: #4c0420" [disabled]="!productForm.valid">Submit</button>
+      </form>
+    </div>
+  </div>
+  <div class="text-center mt-3">
+    <button class="btn btn-primary" style = "background: #4c0420;"  (click)="goBack()">Back</button>
+  </div>
+  

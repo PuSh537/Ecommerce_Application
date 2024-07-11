@@ -1,0 +1,98 @@
+<p>customer works!</p>
+<div class="container">
+    <h2>Customer Registration Form</h2>
+    <form #customerForm="ngForm" (ngSubmit)="onSubmit(customerForm)" class="mt-3">
+        <div class="form-group">
+            <label for="customerName">Enter Name</label>
+            <input type="text" id="customerName" name="customerName" [(ngModel)]="customer.customerName"
+                class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" [(ngModel)]="customer.gender" class="form-control" required>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+    
+          <div class="form-group">
+            <label for="contactNumber">Contact Number</label>
+            <input type="text" id="contactNumber" name="contactNumber" [(ngModel)]="customer.contactNumber" class="form-control"
+            minlength="10" maxlength="10" pattern="[0-9]{10}">
+            <div *ngIf="customerForm.controls['contactNumber'].invalid && (customerForm.controls['contactNumber'].dirty || customerForm.controls['contactNumber'].touched)">
+              <small class="text-danger" *ngIf="customerForm.controls['contactNumber'].errors?.['minlength']">Contact number must be at least 10 digits</small>
+              <small class="text-danger" *ngIf="customerForm.controls['contactNumber'].errors?.['maxlength']">Contact number must not exceed 10 digits</small>
+            </div>
+          </div>
+    
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" [(ngModel)]="customer.email" class="form-control">
+          </div>
+    
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" [(ngModel)]="customer.username" class="form-control" required>
+          </div>
+    
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" [(ngModel)]="customer.password" class="form-control" required>
+          </div>
+    
+          <div class="form-group">
+            <label for="role">Role</label>
+            <select id="role" name="role" [(ngModel)]="customer.role" class="form-control" required>
+              <option value="customer">Customer</option>
+            </select>
+          </div>
+    
+          <div class="form-group">
+            <label id="address">Address</label>
+            <div>
+              <label for="addressLine1">Address Line 1</label>
+              <input type="text" id="addressLine1" name="addressLine1" [(ngModel)]="customer.address.addressLine1" class="form-control"
+                required>
+            </div>
+            <div class="form-group">
+              <label for="postalCode">Postal Code</label>
+              <input type="text" id="postalCode" name="postalCode" [(ngModel)]="customer.address.postalCode" class="form-control"
+                required>
+            </div>
+            <div class="form-group">
+              <label for="city">City</label>
+              <select id="city" name="city" [(ngModel)]="customer.address.city" class="form-control" required>
+                <option value="" disabled selected>Select City</option>
+                <option value="Visakhapatnam">Visakhapatnam</option>
+                <option value="Pune">Pune</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Indore">Indore</option>
+                <option value="Bhopal">Bhopal</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="state">State</label>
+              <select id="state" name="state" [(ngModel)]="customer.address.state" class="form-control" required>
+                <option value="" disabled selected>Select State</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="country">Country</label>
+              <select id="country" name="country" [(ngModel)]="customer.address.country" class="form-control" required>
+                <option value="" disabled selected>Select your country</option>
+                <option value="India">India</option>
+              </select>
+            </div>
+          </div>
+          <div class="mybutton">
+         <button type="submit" class="btn btn-primary" [disabled]="customerForm.invalid"><b>Submit</b></button> 
+        <!-- <button type="submit" class="btn btn-primary"><b>Submit</b></button> -->
+        <div class="text-center pt-4 "><b>Are you a seller?</b><a id="forget" routerLink="/sellerRegister"><b>Register</b></a></div>
+      </div>
+    </form>
+</div>

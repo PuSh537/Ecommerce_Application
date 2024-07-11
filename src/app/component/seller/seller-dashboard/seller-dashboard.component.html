@@ -1,0 +1,35 @@
+<p>seller-dashboard works!</p>
+<nav class="navbar navbar-expand navbar-dark px-2">
+    <div class="container-fluid">
+        <div class="row w-100">
+            <div class="col-9">
+                <a class="navbar-brand px-4" href="#" style="font-size: 40px;">eCommerce</a>
+            </div>
+            <div class="col-3 d-flex justify-content-end">
+                <div class="profile-logo dropstart">
+                    <button class="btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown" style="margin-top:12px">
+                       <span style="font-size:15px"> Seller</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li>
+                            <button class="btn border border-0" (click)="addseller()">
+                                Register seller
+                            </button>
+                        </li>
+                        <li>
+                            <button class="btn border border-0" (click)="addProduct()">
+                            Add Prodcut
+                            </button>
+                        </li>
+                        <li>
+                            <button class="btn border border-0" (click)="Logout()">
+                                LogOut
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+

@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+html,
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Titillium Web", sans-serif;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.container {
+  height: 100%;
+  align-content: center;
+}
+
+.card {
+  height: 370px;
+  margin-top: 50px;
+  ;
+  margin-bottom: auto;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.card-header h3 {
+  color: white;
+}
+
+i {
+  padding: 3px 6px 6px 5px;
+}
+
+.input-group-prepend span {
+  width: 50px;
+  background-color: #a5818f;
+  color: #4c0420;
+  border: 0 !important;
+}
+
+input:focus {
+  outline: 0 0 0 0 !important;
+  box-shadow: 0 0 0 0 !important;
+
+}
+
+input:focus {
+  outline: 0 0 0 0 !important;
+  box-shadow: 0 0 0 0 !important;
+
+}
+
+#button {
+  color: #4c0420;
+  background-color: #a5818f;
+  width: 30vh;
+}
+
+#button:hover {
+  color: black;
+  background-color: #4c0420;
+}
+
+.links {
+  color: white;
+}
+
+.links a {
+  margin-left: 4px;
+}
+
+input {
+
+  margin-bottom: 30px;
+}
+
+button {
+  position: relative;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.card-footer {
+  height: 15%;
+  text-align: center;
+  padding-top: 3%;
+}
+
+.card-header {
+  text-align: center;
+}
+
+form {
+  margin-top: 9%;
+}

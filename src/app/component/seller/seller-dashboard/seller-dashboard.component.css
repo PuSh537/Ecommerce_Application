@@ -1,0 +1,26 @@
+.navbar-expand {
+    background-color: #1e010c;
+    height: 75px;
+    top:0;
+    z-index:1000;
+    position:fixed;
+    width:100%;
+}
+/* .nav-link dropdown */
+.navbar-brand{
+    text-decoration:#ede5e8;
+    size: 70px;
+    width:100%;
+}
+.dropdown-menu{
+    background-color: #a5818f;
+}
+.btn btn-outline{
+ outline-color:#a5818f ;
+}
+.btn btn-primary {
+    background-color: #a5818f;
+}
+nav{
+    height:200%;
+}
